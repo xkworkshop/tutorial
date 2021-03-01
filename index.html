@@ -1,0 +1,153 @@
+<html>
+	<head>
+	
+		<title>HTML/CSS3 教程</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		
+	</head>
+	
+	<body class="body">
+	
+		<div class="mainheader">		
+			<nav>
+				<ul>
+					<li><a href="tutorial">HTML/CSS3</a></li>
+					<li><a href="javascript">Javascript</a></li>
+					<li><a href="jquery">jquery</a></li>
+					<li><a href="software">software</a></li>
+				</ul>
+			</nav>			
+		</header>
+		<br />
+		<div class="maincontent">
+			<article class="01">
+				<header><h2>【01】HTML的初始代码</h2></header>
+				<footer><p>
+初始代码填写完毕后，最重要的工作只剩两个：写css3代码、写article文章。
+而article文章包含header标题、footer导语、content正文三部分内容。
+其中，content可以包含多个p段落。
+				</p></footer>
+				<content>
+					<p>这里填写正文内容：<br />
+<TEXTAREA rows="20" cols="100">
+<html>
+	<head>
+		<title>HTML/CSS3 教程</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css" type="text/css" />		
+	</head>
+	
+	<body class="body">	
+		<header class="mainheader">		
+			<nav>
+				<ul>
+					<li><a href="tutorial">HTML/CSS3</a></li>
+					<li><a href="javascript">Javascript</a></li>
+					<li><a href="jquery">jquery</a></li>
+					<li><a href="software">software</a></li>
+				</ul>
+			</nav>			
+		</header>
+		
+		<div class="maincontent"
+		
+			<article class="01">
+				<header><h2>01：HTML的初始代码</h2></header>
+				<footer><p>导语内容：这里可以填写导语或发布日期</p></footer>
+				<content>
+					<p>这里填写正文内容：<br />
+					</p>
+				</content>
+			</article>
+			
+		</div>
+	</body>
+</html>
+</TEXTAREA>
+
+					</p>
+					
+					<p>
+下面是单篇文章的标准格式：分为标题、标注、正文（多个p段落构成）三个部分：
+					</p>
+<TEXTAREA  rows="10" cols="100">
+<article class="01">
+	<header><h2>文章的标题</h2></header>
+	<footer><p>导语内容：这里可以填写导语或发布日期</p></footer>
+	<content>
+		<p>
+这里填写正文内容：<br />
+这里填写正文内容。
+		</p>
+	</content>
+</article>
+</TEXTAREA>
+					
+					
+				</content>
+			</article>
+
+			<article class="02">
+				<header><h2>02：style.css格式的写法</h2></header>
+				<footer><p>body是控制整个页面的标题和正文文字效果，而.body是控制其中的元素内容。</p></footer>
+				<content>
+					<p>
+<TEXTAREA rows="20" cols="100">
+body{
+	background-image:url(img/ice1.jpg); 【这是网页背景图】
+	color: #003500; 【文字颜色，一般不需要设置】
+	font-size:87.5%; 【文字大小，100%为不变，一般不需要设置】
+	font-family:simsun;【字体，一般不需要设置】
+	line-height:1.5;【行间距，一般不需要设置】
+	text-align:left;【左对齐】
+}
+
+.body{
+	margin:0 auto;
+	width:50%;【这个至关重要，这个就是控制页面在中间区域显示的】
+	clear:both;
+}
+
+.mainheader nav{
+	background-color:#666;【导航栏的背景色】
+	height:40px;【导航背景的垂直高度，注意这个要根据按钮的位置设置】
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+.mainheader nav ul li{
+	float:left;【控制列表排成一行，这个是导航栏的列表】
+	display:inline;【取消列表前的小圆点】
+}
+
+.mainheader nav a:link, .mainheader nav a:visited{
+	color:#FFF;【header中链接的文字颜色】
+	display:inline-block;									
+	padding:20px 25px;
+}
+</TEXTAREA>
+					</p>
+					<p>
+遗留问题：为什么01文章的标题会右对齐而不是左对齐？为什么01文章的标题会随着nav导航列表移动？
+					</p>
+					<p>
+答：通过加hr 横线或者 br换行发现，横线也是从只有右边的部分，可见不是article的问题，而是nav本身的问题，它既然被float显示了，那么它就不再是标准的矩形了，从它结束的位置开始就接着显示下一区块的内容。所以，必须加换行符号来使得article部分在正确的位置显示。
+					</p>
+					
+					<p>
+问题2：为什么nav中的链接列表，也就是主页导航按钮文字不是位于背景的中心，而是紧贴着下边缘？
+					</p>
+					<p>
+答：边缘背景的高度height决定的，因为刚才只设置了40像素，只要设成60像素就可以了。
+也可以调节nav按钮的padding值，使它的垂直方向位置收缩匹配背景的位置。
+					</p>
+				</content>
+			</article>			
+			
+		</div>
+	</body>
+</html>
